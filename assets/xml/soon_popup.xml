@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>	
+	<include id="ui_global"/>
+	
+	<!--STUFF-->
+	
+	<sprite id="black" x="0" y="0" width="100%" height="100%" color="0x88000000"/>
+	
+	<chrome id="back" src="ui/boxes/gray" slice9="15,15,20,20" center_x="true" center_y="true" width="250" height="200"/>		
+	
+	<text id="title" use_def="title-16" x="0" y="12" width="back.width" color="0xffffff" outline="0x000000" text="This is a Title" align="center">
+		<anchor x="back.left" x-flush="left" y="back.top" y-flush="top"/>		
+	</text>
+	
+	<text id="body" use_def="subtitle-14" x="5" y="8" width="back.width-10" color="0xffffff" outline="0x000000" text="This is the body of a popup." align="center">
+		<anchor x="back.left" x-flush="left" y="title.bottom" y-flush="top"/>		
+	</text>
+	
+	<button id="btn0" use_def="button" y="-10" label="OK">
+		<anchor y="back.bottom" y-flush="bottom"/>
+		<param type="int" value="0"/>
+	</button>
+	
+	<button id="btn1" use_def="button" label="No">
+		<anchor y="btn0.top" y-flush="top"/>
+		<param type="int" value="1"/>
+	</button>
+		
+	<button id="btn2" use_def="button" label="Cancel">
+		<anchor y="btn0.top" y-flush="top"/>		
+		<param type="int" value="2"/>
+	</button>
+		
+	<mode id="demo_0" is_default="true">
+		<show id="btn1"/>
+		<hide id="btn0,btn2"/>
+		<align axis="horizontal" spacing="10" resize="true">
+			<bounds left="back.left+30" right="back.right-30"/>
+			<objects value="btn1"/>
+		</align>
+		<change id="title" text="Stay Tuned!"/>
+		<change id="body" text="WitzyHx is coming soon."/>
+		<change id="btn0" label="Second Popup"/>
+		<change id="btn1" label="Exit"/>
+	</mode>
+	
+	<mode id="demo_1">
+		<show id="btn1"/>
+		<hide id="btn0,btn2"/>
+		<align axis="horizontal" spacing="10" resize="true">
+			<bounds left="back.left+30" right="back.right-30"/>
+			<objects value="btn1"/>
+		</align>
+		<change id="title" text="Title"/>
+		<change id="body" text="Body"/>
+		<change id="btn0" label="Second Popup"/>
+		<change id="btn1" label="Two Buttons"/>
+	</mode>
+	
+</data>

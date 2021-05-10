@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>	
+	<include id="ui_global"/>
+	
+	<!--STUFF-->
+	
+	<button id="popup" center_x="true" x="0" y="450" use_def="button" group="top" label="Click to Play">
+		<param type="string" value="popup"/>
+	</button>
+	
+</data>
